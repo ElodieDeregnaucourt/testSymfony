@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{# héritage du fichier base.html.twig #}
+
+{% block title %} {{parent()}} | Gestion des contacts {% endblock %}
+
+{% block h1 %} Gestion des contacts {% endblock %}
+
+
+{% block body %}
+
+	<div>
+		<a href="{{ path('contact_ajouter') }}">Ajouter un contact</a>
+	</div>
+
+
+
+	{% if contact %}...
+
+	{% else %}
+
+		<h4>Il n'y a aucun contact pour le moment</h4>
+
+	{% endif %}
+
+
+{% endblock %}

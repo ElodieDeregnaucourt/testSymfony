@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+   
+}
+
+
+.nav {
+    
+    padding-right: 50px;
+    background-color: rgba(0, 204, 255, 0.589);
+    height: 30px;
+    
+}
+nav a {
+    font-style: italic;
+    padding-right: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(243, 141, 213);
+}
+
+p {
+    text-align: center;
+    width: 60%;
+}
+
+img {
+    
+    height: 300px;
+    
+    
+}
