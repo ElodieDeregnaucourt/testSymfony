@@ -1,17 +1,32 @@
 {% extends 'base.html.twig' %}
 {# héritage du fichier base.html.twig #}
 
-{% block title %} {{parent()}} | Gestion des contacts {% endblock %}
+{% block title %}  Liste des contacts {% endblock %}
 
-{% block h1 %} Gestion des contacts {% endblock %}
 
 
 {% block body %}
 
+	<style>
+    h1{ color: #ff80c0}
+	.btn {font-size:30px;background-color: #80ffff; border : 2px solid; border-radius:10px; text-decoration: none}
+	</style>
+
+	{% include "header/index.html.twig" %}
+
+	<h1> Liste des Contacts </h1>
+
 	<div>
-		<a href="{{ path('contact_ajouter') }}">Ajouter un contact</a>
+		<a class="btn" href="{{ path('contact_ajouter') }}">Ajouter un contact</a> <br>
 	</div>
 
+	{% for notification in app.flashes('success') %}
+ 	<div>{{ notification }}</div>
+ 	{% endfor %}
+
+	{% for gens in contact %} <br>
+	Bonjour {{gens.nom}} {{gens.prenom}} <br>
+	{% endfor %}
 
 
 	{% if contact %}...
